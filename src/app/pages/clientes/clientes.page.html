@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle >{{data.contact}}</ion-card-subtitle>
+      <ion-card-title>{{data.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Direccion: {{data.address}}</p>
+      <p>Nit: {{data.nit}}</p>
+      <p>Telefono: {{data.phone}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+          <ion-button shape="round"
+                      expand="full"
+                      size="small"
+                      fill="outline"
+                      color="tertiary"
+                      routerLink="/historial-productos"
+                      >
+            Historial
+          </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="round"
+                    expand="full"
+                    size="small"
+                    fill="outline"
+                    color="tertiary"
+                    routerLink="/pedidos"
+                    >
+          Pedidos
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

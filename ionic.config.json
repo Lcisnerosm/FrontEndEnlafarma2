@@ -1,0 +1,7 @@
+{
+  "name": "frontendalmafarma",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

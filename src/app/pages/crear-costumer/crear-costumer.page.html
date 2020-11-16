@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="crearCostumer( flogin )" #fLogin="ngForm">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-label>Nombre</ion-label>
+                <ion-input name="name"
+                            type="text"
+                            [(ngModel)]="cusntomer.name"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Dirrección</ion-label>
+                <ion-input name="address"
+                            type="text"
+                            [(ngModel)]="cusntomer.address"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>NIT</ion-label>
+                <ion-input name="nit"
+                            type="number"
+                            [(ngModel)]="cusntomer.nit"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Contacto</ion-label>
+                <ion-input name="contact"
+                            type="text"
+                            [(ngModel)]="cusntomer.contact"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Telefono</ion-label>
+                <ion-input name="phone"
+                            type="text"
+                            [(ngModel)]="cusntomer.phone"
+                            required></ion-input>
+              </ion-item>
+            </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit"
+                      color="tertiary"
+                      shape="round">
+            Aguardar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
