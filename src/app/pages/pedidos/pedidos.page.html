@@ -5,6 +5,8 @@
     </ion-buttons>
 
     <ion-title>pedidos</ion-title>
+      <ion-button slot="end">{{productCarrito.length}}</ion-button>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -16,13 +18,17 @@
     <ion-card-content>
       
         <ion-label>Cantidad</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input  name='cantidad' #carrito1 placeHolder='Ingresar cantidad' (change)='changeCantidad(carrito1.value)'  type="number"></ion-input>
       
       
         <ion-label>Precio</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input name='precio' #carrito placeHolder='Ingresar precio' type="number"  (change)='changePrecio(carrito.value)'></ion-input>
+
+       <button class="button"  (click)="getCarrito(p.idproduct, p.name)">Agregar al Carrito</button>
     
     </ion-card-content>
   </ion-card>
-
+  <ion-footer>
+    <ion-button (click)="confirmarPedido()">Confirmar pedidido</ion-button>
+  </ion-footer>
 </ion-content>

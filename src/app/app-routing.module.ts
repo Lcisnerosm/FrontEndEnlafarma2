@@ -37,7 +37,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/historial-productos/historial-productos.module').then( m => m.HistorialProductosPageModule)
   },
   {
-    path: 'pedidos',
+    path: 'pedidos/:id',
     loadChildren: () => import('./pages/pedidos/pedidos.module').then( m => m.PedidosPageModule)
   }
 ];
