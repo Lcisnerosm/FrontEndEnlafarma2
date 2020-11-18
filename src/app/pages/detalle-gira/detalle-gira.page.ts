@@ -13,9 +13,9 @@ export class DetalleGiraPage implements OnInit {
     private customerServices: CustomersService,
     private activateRouiter: ActivatedRoute
   ) {
-    this.traerBranch()
+    this.traerBranch();
   }
-  datac: Customer[] = []
+  datac: Customer[] = [];
   customer: any;
   idParams: any = `/crear-costumer/${this.activateRouiter.snapshot.params.id}`;
   async ngOnInit() {
