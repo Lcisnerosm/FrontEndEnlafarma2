@@ -3,10 +3,27 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
+
     <ion-title>historialProductos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-content>
+    <div class="row header">
+      <div class="col">Fecha</div>
+      <div class="col">Producto</div>
+      <div class="col">Cantidad</div>
+      <div class="col">Precio</div>
+      <div class="col">Total</div>
+    </div>
 
+    <div class="row"  *ngFor="let option of sales">
+      <div class="col">{{option.fecha | date}}</div>
+      <div class="col">{{option.name_product}}</div>
+      <div class="col">{{option.quantity}}</div>
+      <div class="col">{{option.price}}</div>
+      <div class="col">{{option.total}}</div>
+    </div>
+  </ion-content>
 </ion-content>

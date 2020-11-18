@@ -3,25 +3,29 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
+
     <ion-title>Descripción de la gira</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-content>
-    <ion-refresher slot="fixed" (ionRefresh)="doRefresh(event)">
+  <!-- <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
       <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
-  </ion-content>
-  <ion-list >
-    <ion-item *ngFor="let customer of data"
-              [routerLink]="['/clientes/', customer.idcustomer]" >
-      <ion-label>
-        {{customer.name_customer}}
-      </ion-label>
+  </ion-content> -->
+
+  <ion-list *ngFor="let customer of datac">
+    <ion-item [routerLink]="['/clientes/', customer.idcustomer]">
+      <ion-label>{{customer.name_customer}}</ion-label>
     </ion-item>
   </ion-list>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+
+  <ion-fab
+    vertical="bottom"
+    horizontal="end"
+    slot="fixed"
+  >
     <ion-fab-button [routerLink]="idParams">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>

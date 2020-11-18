@@ -3,10 +3,26 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
+
     <ion-title>pedidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let p of product" class="card">
+    <ion-card-header>
+      <ion-card-subtitle >{{p.name}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      
+        <ion-label>Cantidad</ion-label>
+        <ion-input type="number"></ion-input>
+      
+      
+        <ion-label>Precio</ion-label>
+        <ion-input type="number"></ion-input>
+    
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

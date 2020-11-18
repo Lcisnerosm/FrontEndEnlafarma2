@@ -33,7 +33,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'historial-productos',
+    path: 'historial-productos/:id',
     loadChildren: () => import('./pages/historial-productos/historial-productos.module').then( m => m.HistorialProductosPageModule)
   },
   {

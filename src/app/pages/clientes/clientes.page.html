@@ -24,12 +24,15 @@
   <ion-toolbar>
     <ion-row>
       <ion-col>
+        <!-- [routerLink]="['/historial-productos/'" -->
+        <!-- [routerLink]="['/detalle-gira/', branch.idbranch]" -->
           <ion-button shape="round"
                       expand="full"
                       size="small"
                       fill="outline"
                       color="tertiary"
-                      routerLink="/historial-productos"
+                      [routerLink]="['/historial-productos/', data.idcustomer]"
+                      
                       >
             Historial
           </ion-button>

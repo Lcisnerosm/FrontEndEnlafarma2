@@ -10,7 +10,7 @@ export class UsuarioGuard implements CanLoad {
   constructor(private usuarioService: UsuarioService){}
 
   canLoad(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.usuarioService.validaToken()
+    return this.usuarioService.validaToken();
   }
 
 }

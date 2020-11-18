@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { resolve } from 'dns';
+/* import { resolve } from 'dns'; */
 import { environment } from 'src/environments/environment';
 import { Brachs } from '../interfaces/brachs';
 const URL = environment.URL
